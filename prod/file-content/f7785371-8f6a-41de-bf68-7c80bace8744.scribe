@@ -1,0 +1,16 @@
+resource "file-content" "f7785371-8f6a-41de-bf68-7c80bace8744" {
+  uuid = "f7785371-8f6a-41de-bf68-7c80bace8744"
+  content = <<EOFSCRIBE
+## En el archivo logrotate.conf>>>>>>>>  
+ 
+# vi /etc/logrotate.conf
+# Descomentar  	compress
+#compress
+ 
+echo "compress" >> /etc/logrotate.conf
+
+echo "Configuración de compresion LogRotate"
+EOFSCRIBE
+  dateCreated = "2024-02-28T16:25:35.000Z"
+  lastUpdated = "2024-02-28T16:25:35.000Z"
+}
