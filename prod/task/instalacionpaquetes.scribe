@@ -7,11 +7,11 @@ resource "task" "instalacionpaquetes" {
   labels = [ "Instalacion", "Paquetes", "Scripts" ]
   lastUpdated = "2024-02-28T17:09:25.000Z"
   options = [
+    { optionType = { code = "shell.sudo" }, value = "on" },
     {
       content = { uuid = "e2a1ec9a-5bdd-462e-b7cd-a3c23f2e9030" }
       optionType = { code = "script" }
-    },
-    { optionType = { code = "shell.sudo" }, value = "on" }
+    }
   ]
   taskType = { code = "script" }
 }
