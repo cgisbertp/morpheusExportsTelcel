@@ -1,0 +1,16 @@
+resource "task" "configuracionsnmp" {
+  code = "configuracionsnmp"
+  name = "RedHat - Configuración SNMP"
+  uuid = "f0ef40c2-e80c-4a60-9822-56d412bd0fb8"
+  dateCreated = "2024-02-28T16:23:46.000Z"
+  executeTarget = "resource"
+  labels = [ "Configuracion", "SNMP", "Scripts" ]
+  lastUpdated = "2024-02-28T17:09:07.000Z"
+  options = [
+    {
+      content = { uuid = "e1c667b5-c0ef-49f8-b6db-0ac77247e205" }
+      optionType = { code = "script" }
+    }
+  ]
+  taskType = { code = "script" }
+}
