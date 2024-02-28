@@ -1,0 +1,17 @@
+resource "task" "disablefw" {
+  code = "disablefw"
+  name = "RedHat - Deshabilitar Firewall"
+  uuid = "9e0ac0e0-9d44-4397-bec2-0e05cfb3aee5"
+  dateCreated = "2024-02-28T16:09:15.000Z"
+  executeTarget = "resource"
+  labels = [ "Disable", "FW", "Scripts" ]
+  lastUpdated = "2024-02-28T17:09:17.000Z"
+  options = [
+    {
+      content = { uuid = "feb0bbc3-d287-4129-9ec3-8d248ee288a4" }
+      optionType = { code = "script" }
+    },
+    { optionType = { code = "shell.sudo" }, value = "on" }
+  ]
+  taskType = { code = "script" }
+}

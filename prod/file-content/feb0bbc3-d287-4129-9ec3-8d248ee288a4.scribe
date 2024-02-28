@@ -1,0 +1,12 @@
+resource "file-content" "feb0bbc3-d287-4129-9ec3-8d248ee288a4" {
+  uuid = "feb0bbc3-d287-4129-9ec3-8d248ee288a4"
+  content = <<EOFSCRIBE
+echo "Deshabilitación de firewall"
+echo "Se detiene el servicio del FW"
+echo | systemctl stop firewalld
+echo "Se deshabilita el FW"
+echo | systemctl disable firewalld 
+EOFSCRIBE
+  dateCreated = "2024-02-28T16:09:15.000Z"
+  lastUpdated = "2024-02-28T16:09:15.000Z"
+}
