@@ -1,0 +1,33 @@
+resource "file-content" "b39d00d7-bca6-4ef9-b321-b82381396542" {
+  uuid = "b39d00d7-bca6-4ef9-b321-b82381396542"
+  content = <<EOFSCRIBE
+timedatectl set-timezone America/Mexico_City
+
+## El archivo de configuracion debe contener las siguientes líneas
+ 
+# vi /etc/ntp.conf
+cp /etc/ntp.conf /etc/ntp.conf.bk
+
+echo "driftfile /var/lib/ntp/drift" >> /etc/ntp.conf
+
+echo "restrict default nomodify notrap nopeer noquery" >> /etc/ntp.conf
+
+echo "restrict 127.0.0.1"  >> /etc/ntp.conf
+
+echo "restrict ::1"  >> /etc/ntp.conf
+
+echo "server  10.208.27.150"  >> /etc/ntp.conf
+
+echo "server  10.192.7.70"  >> /etc/ntp.conf
+
+echo "includefile /etc/ntp/crypto/pw"  >> /etc/ntp.conf
+
+echo "keys /etc/ntp/keys"  >> /etc/ntp.conf
+
+echo "disable monitor"  >> /etc/ntp.conf
+ 
+echo "Configuración NTP Exitosa"
+EOFSCRIBE
+  dateCreated = "2023-07-17T16:48:10.000Z"
+  lastUpdated = "2024-02-28T16:18:03.000Z"
+}
