@@ -7,11 +7,11 @@ resource "task" "disablefw" {
   labels = [ "Disable", "FW", "Scripts" ]
   lastUpdated = "2024-02-28T17:09:17.000Z"
   options = [
+    { optionType = { code = "shell.sudo" }, value = "on" },
     {
       content = { uuid = "feb0bbc3-d287-4129-9ec3-8d248ee288a4" }
       optionType = { code = "script" }
-    },
-    { optionType = { code = "shell.sudo" }, value = "on" }
+    }
   ]
   taskType = { code = "script" }
 }
