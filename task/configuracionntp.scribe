@@ -1,0 +1,18 @@
+resource "task" "configuracionntp" {
+  code = "configuracionntp"
+  name = "RedHat  - Configuración de NTP"
+  uuid = "e6663ea8-7065-45f6-8df4-08f79e95c799"
+  dateCreated = "2023-07-17T16:48:10.000Z"
+  executeTarget = "resource"
+  labels = [ "Configuracion", "NTP", "Scripts" ]
+  lastUpdated = "2024-02-28T17:08:47.000Z"
+  options = [
+    {
+      content = { uuid = "b39d00d7-bca6-4ef9-b321-b82381396542" }
+      optionType = { code = "script" }
+    },
+    { optionType = { code = "shell.sudo" }, value = "on" }
+  ]
+  taskType = { code = "script" }
+  visibility = "public"
+}
