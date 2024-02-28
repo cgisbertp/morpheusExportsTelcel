@@ -7,11 +7,11 @@ resource "task" "configurardns" {
   labels = [ "Configuracion", "DNS", "Scripts" ]
   lastUpdated = "2024-02-28T17:09:32.000Z"
   options = [
-    { optionType = { code = "shell.sudo" }, value = "on" },
     {
       content = { uuid = "b84e86e5-3087-4267-8507-3ee29fdbe045" }
       optionType = { code = "script" }
-    }
+    },
+    { optionType = { code = "shell.sudo" }, value = "on" }
   ]
   taskType = { code = "script" }
 }
