@@ -1,0 +1,17 @@
+resource "task" "instalacionpaquetes" {
+  code = "instalacionpaquetes"
+  name = "RedHat - Instalación de Paquetes"
+  uuid = "0a1993ef-debb-4993-b13b-bac4739189fa"
+  dateCreated = "2024-02-28T16:12:38.000Z"
+  executeTarget = "resource"
+  labels = [ "Instalacion", "Paquetes", "Scripts" ]
+  lastUpdated = "2024-02-28T17:09:25.000Z"
+  options = [
+    {
+      content = { uuid = "e2a1ec9a-5bdd-462e-b7cd-a3c23f2e9030" }
+      optionType = { code = "script" }
+    },
+    { optionType = { code = "shell.sudo" }, value = "on" }
+  ]
+  taskType = { code = "script" }
+}

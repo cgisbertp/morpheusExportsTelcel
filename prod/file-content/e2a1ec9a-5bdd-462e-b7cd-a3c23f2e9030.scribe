@@ -1,0 +1,17 @@
+resource "file-content" "e2a1ec9a-5bdd-462e-b7cd-a3c23f2e9030" {
+  uuid = "e2a1ec9a-5bdd-462e-b7cd-a3c23f2e9030"
+  content = <<EOFSCRIBE
+echo "Instalación de paquetes"
+echo | yum install xorg-x11-apps.x86_64 -y 
+echo | yum install xorg-x11-utils.x86_64 -y 
+echo | yum install smartmontools.x86_64 -y 
+echo | yum install bind-utils.x86_64 -y 
+echo | yum install tcsh.x86_64 -y 
+echo | yum install tree.x86_64 -y 
+echo | yum install bc.x86_64 -y 
+echo | yum install dos2unix.x86_64 -y 
+echo | yum install ntp -y
+EOFSCRIBE
+  dateCreated = "2024-02-28T16:12:38.000Z"
+  lastUpdated = "2024-02-28T16:12:38.000Z"
+}
