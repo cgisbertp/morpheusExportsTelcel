@@ -7,11 +7,11 @@ resource "task" "configuracionlogrotate" {
   labels = [ "Configuracion", "LogRotate", "Scripts" ]
   lastUpdated = "2024-02-28T17:08:58.000Z"
   options = [
+    { optionType = { code = "shell.sudo" }, value = "on" },
     {
       content = { uuid = "f7785371-8f6a-41de-bf68-7c80bace8744" }
       optionType = { code = "script" }
-    },
-    { optionType = { code = "shell.sudo" }, value = "on" }
+    }
   ]
   taskType = { code = "script" }
 }
