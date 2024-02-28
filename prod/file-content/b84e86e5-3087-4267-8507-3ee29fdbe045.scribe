@@ -1,0 +1,18 @@
+resource "file-content" "b84e86e5-3087-4267-8507-3ee29fdbe045" {
+  uuid = "b84e86e5-3087-4267-8507-3ee29fdbe045"
+  content = <<EOFSCRIBE
+# El archivo de configuración solo debe contener las siguientes lineas (eliminar la linea de search)
+
+# vi /etc/resolv.conf
+
+echo "nameserver 10.207.52.57" >> /etc/resolv.conf
+
+echo "nameserver 10.119.248.13"  >> /etc/resolv.conf
+
+echo "nameserver 10.119.248.14"  >> /etc/resolv.conf
+
+echo "Configuración exitosa DNS"
+EOFSCRIBE
+  dateCreated = "2024-02-28T16:20:42.000Z"
+  lastUpdated = "2024-02-28T17:09:32.000Z"
+}

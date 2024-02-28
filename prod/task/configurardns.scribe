@@ -1,0 +1,17 @@
+resource "task" "configurardns" {
+  code = "configurardns"
+  name = "RedHat - Validar & Configurar DNS"
+  uuid = "0c855d83-d5e7-4d4d-972c-94574f64d42c"
+  dateCreated = "2024-02-28T16:20:42.000Z"
+  executeTarget = "resource"
+  labels = [ "Configuracion", "DNS", "Scripts" ]
+  lastUpdated = "2024-02-28T17:09:32.000Z"
+  options = [
+    { optionType = { code = "shell.sudo" }, value = "on" },
+    {
+      content = { uuid = "b84e86e5-3087-4267-8507-3ee29fdbe045" }
+      optionType = { code = "script" }
+    }
+  ]
+  taskType = { code = "script" }
+}
