@@ -1,0 +1,28 @@
+resource "file-content" "e1c667b5-c0ef-49f8-b6db-0ac77247e205" {
+  uuid = "e1c667b5-c0ef-49f8-b6db-0ac77247e205"
+  content = <<EOFSCRIBE
+# grep rocommunity /etc/snmp/snmpd.conf
+ 
+# vi /etc/snmp/snmpd.conf
+
+echo "rocommunity C&rG1ngM@g3R 10.119.131.31" >> /etc/snmp/snmpd.conf
+
+echo "rocommunity ronag10s12 10.191.143.214" >> /etc/snmp/snmpd.conf
+
+echo "rocommunity ronag10s12 10.188.6.78" >> /etc/snmp/snmpd.conf
+
+echo "rocommunity ronag10s12 10.191.104.35" >> /etc/snmp/snmpd.conf
+ 
+# systemctl restart snmpd
+echo "Restart del servicio snmp"
+echo | systemctl restart snmpd
+
+# systemctl enable snmpd
+echo "Habilitar el servicio snmp"
+echo | systemctl enable snmpd
+
+echo "Configuración exitosa del servicio SNMP"
+EOFSCRIBE
+  dateCreated = "2024-02-28T16:23:46.000Z"
+  lastUpdated = "2024-02-28T16:25:54.000Z"
+}
