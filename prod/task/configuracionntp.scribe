@@ -7,11 +7,11 @@ resource "task" "configuracionntp" {
   labels = [ "Configuracion", "NTP", "Scripts" ]
   lastUpdated = "2024-02-28T17:08:47.000Z"
   options = [
-    { optionType = { code = "shell.sudo" }, value = "on" },
     {
       content = { uuid = "b39d00d7-bca6-4ef9-b321-b82381396542" }
       optionType = { code = "script" }
-    }
+    },
+    { optionType = { code = "shell.sudo" }, value = "on" }
   ]
   taskType = { code = "script" }
   visibility = "public"
